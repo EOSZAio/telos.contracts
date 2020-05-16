@@ -419,8 +419,8 @@ namespace eosiosystem {
     */
    void system_contract::check_voting_requirement( const name& owner, const char* error_msg )const
    {
-      auto vitr = _voters.find( owner.value );
-      check( vitr != _voters.end() && ( vitr->proxy || 21 <= vitr->producers.size() ), error_msg );
+// TEDP 2.0      auto vitr = _voters.find( owner.value );
+// TEDP 2.0      check( vitr != _voters.end() && ( vitr->proxy || 21 <= vitr->producers.size() ), error_msg );
    }
 
    /**
@@ -969,7 +969,7 @@ namespace eosiosystem {
     */
    time_point_sec system_contract::get_rex_maturity()
    {
-      const uint32_t num_of_maturity_buckets = 5;
+      const uint32_t num_of_maturity_buckets = 15; // TEDP 2.0 - change REX maturity from 4 to 14 days
       static const uint32_t now = current_time_point().sec_since_epoch();
       static const uint32_t r   = now % seconds_per_day;
       static const time_point_sec rms{ now - r + num_of_maturity_buckets * seconds_per_day };

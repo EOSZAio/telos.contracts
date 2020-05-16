@@ -894,8 +894,8 @@ namespace eosiosystem {
           * @param loan_fund - additional tokens can be zero, and is added to loan balance.
           *    Loan balance represents a reserve that is used at expiration for automatic loan renewal.
           */
-         [[eosio::action]]
-         void rentcpu( const name& from, const name& receiver, const asset& loan_payment, const asset& loan_fund );
+// TEDP 2.0         [[eosio::action]]
+// TEDP 2.0         void rentcpu( const name& from, const name& receiver, const asset& loan_payment, const asset& loan_fund );
 
          /**
           * Rentnet action.
@@ -916,8 +916,8 @@ namespace eosiosystem {
           * @param loan_fund - additional tokens can be zero, and is added to loan balance.
           *    Loan balance represents a reserve that is used at expiration for automatic loan renewal.
           */
-         [[eosio::action]]
-         void rentnet( const name& from, const name& receiver, const asset& loan_payment, const asset& loan_fund );
+// TEDP 2.0         [[eosio::action]]
+// TEDP 2.0         void rentnet( const name& from, const name& receiver, const asset& loan_payment, const asset& loan_fund );
 
          /**
           * Fundcpuloan action.
@@ -1330,8 +1330,8 @@ namespace eosiosystem {
          using unstaketorex_action = eosio::action_wrapper<"unstaketorex"_n, &system_contract::unstaketorex>;
          using sellrex_action = eosio::action_wrapper<"sellrex"_n, &system_contract::sellrex>;
          using cnclrexorder_action = eosio::action_wrapper<"cnclrexorder"_n, &system_contract::cnclrexorder>;
-         using rentcpu_action = eosio::action_wrapper<"rentcpu"_n, &system_contract::rentcpu>;
-         using rentnet_action = eosio::action_wrapper<"rentnet"_n, &system_contract::rentnet>;
+// TEDP 2.0         using rentcpu_action = eosio::action_wrapper<"rentcpu"_n, &system_contract::rentcpu>;
+// TEDP 2.0         using rentnet_action = eosio::action_wrapper<"rentnet"_n, &system_contract::rentnet>;
          using fundcpuloan_action = eosio::action_wrapper<"fundcpuloan"_n, &system_contract::fundcpuloan>;
          using fundnetloan_action = eosio::action_wrapper<"fundnetloan"_n, &system_contract::fundnetloan>;
          using defcpuloan_action = eosio::action_wrapper<"defcpuloan"_n, &system_contract::defcpuloan>;
